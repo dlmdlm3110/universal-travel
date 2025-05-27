@@ -1,11 +1,12 @@
+
 <!DOCTYPE html>
-<!-- saved from url=(0035)https://wtcyrvby.gensparkspace.com/ -->
-<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>バリアフリー旅プランナー</title>
-    <link href="./index_files/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./index_files/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <style>
         .loading {
             border: 4px solid #f3f4f6;
@@ -25,107 +26,7 @@
             gap: 0.75rem;
         }
     </style>
-<style>
-    .genspark-notice-dialog {
-      display: flex;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      z-index: 10001;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .genspark-notice-content {
-      background-color: white;
-      border-radius: 8px;
-      max-width: 600px;
-      width: 90%;
-      box-sizing: border-box;
-      padding: 10px 30px 30px 30px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      font-size: 16px;
-    }
-
-    .genspark-notice-title {
-      color: #000;
-      font-family: Arial;
-      font-size: 20px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 150%; 
-    }
-
-    .genspark-notice-list {
-      margin: 24px 0;
-      
-      color: #606366;
-      font-family: Arial;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 150%;
-      padding-left: 12px;
-    }
-
-    .genspark-notice-list li {
-      margin-bottom: 12px;
-      list-style-type: disc;
-    }
-
-    .genspark-notice-list li a {
-      color: #606366;
-      text-decoration: underline;
-    }
-
-    .genspark-notice-checkbox {
-      display: flex;
-      align-items: center;
-      margin-top: 20px;
-      gap: 10px;
-
-      color: #232425;
-
-      font-family: Arial;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-    }
-
-    .genspark-notice-actions {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-    }
-      
-    .genspark-notice-ok {
-      color: #232425;
-
-      text-align: center;
-      font-family: Arial;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 150%; 
-
-      cursor: pointer;
-      display: flex;
-      height: 40px;
-      padding: 6px 14px;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      align-self: stretch;
-      border-radius: 8px;
-      border: 1px solid #000;
-      box-sizing: border-box;
-      width: 100%;
-    }
-  </style></head>
+</head>
 <body class="bg-gray-50 min-h-screen">
     <div class="container mx-auto px-4 py-8 max-w-4xl">
         <!-- ヘッダー -->
@@ -153,7 +54,9 @@
                 <label for="apiKey" class="block text-sm font-medium text-gray-700 mb-2">
                     <i class="fas fa-key mr-2"></i>Google Gemini API キー <span class="text-red-500">*</span>
                 </label>
-                <input type="password" id="apiKey" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="AIzaSy...">
+                <input type="password" id="apiKey" 
+                       class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                       placeholder="AIzaSy...">
                 <div class="mt-2 flex items-center text-sm text-gray-600">
                     <input type="checkbox" id="saveApiKey" class="mr-2">
                     <label for="saveApiKey">APIキーを保存する</label>
@@ -175,7 +78,9 @@
                     <label for="departure" class="block text-sm font-medium text-gray-700 mb-2">
                         <i class="fas fa-map-marker-alt mr-2"></i>出発地 <span class="text-red-500">*</span>
                     </label>
-                    <input type="text" id="departure" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="例: 東京">
+                    <input type="text" id="departure" 
+                           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                           placeholder="例: 東京">
                 </div>
 
                 <!-- 目的地 -->
@@ -183,7 +88,9 @@
                     <label for="destination" class="block text-sm font-medium text-gray-700 mb-2">
                         <i class="fas fa-flag mr-2"></i>目的地 <span class="text-red-500">*</span>
                     </label>
-                    <input type="text" id="destination" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="例: 京都">
+                    <input type="text" id="destination" 
+                           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                           placeholder="例: 京都">
                 </div>
             </div>
 
@@ -193,7 +100,9 @@
                     <label for="duration" class="block text-sm font-medium text-gray-700 mb-2">
                         <i class="fas fa-calendar-alt mr-2"></i>旅行日数 <span class="text-red-500">*</span>
                     </label>
-                    <input type="number" id="duration" min="1" max="30" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="例: 3">
+                    <input type="number" id="duration" min="1" max="30" 
+                           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                           placeholder="例: 3">
                 </div>
 
                 <!-- 旅行メンバー -->
@@ -208,11 +117,13 @@
                     <div class="grid grid-cols-2 gap-4">
                         <div>
                             <label for="adults" class="block text-xs text-gray-600 mb-1">大人</label>
-                            <input type="number" id="adults" min="0" max="20" value="2" class="w-full px-2 py-1 border border-gray-300 rounded text-sm focus:outline-none focus:ring-1 focus:ring-blue-500">
+                            <input type="number" id="adults" min="0" max="20" value="2" 
+                                   class="w-full px-2 py-1 border border-gray-300 rounded text-sm focus:outline-none focus:ring-1 focus:ring-blue-500">
                         </div>
                         <div>
                             <label for="children" class="block text-xs text-gray-600 mb-1">子供</label>
-                            <input type="number" id="children" min="0" max="20" value="0" class="w-full px-2 py-1 border border-gray-300 rounded text-sm focus:outline-none focus:ring-1 focus:ring-blue-500">
+                            <input type="number" id="children" min="0" max="20" value="0" 
+                                   class="w-full px-2 py-1 border border-gray-300 rounded text-sm focus:outline-none focus:ring-1 focus:ring-blue-500">
                         </div>
                     </div>
                 </div>
@@ -229,7 +140,7 @@
                         <span><i class="fas fa-torii-gate mr-2 text-orange-600"></i>歴史・文化</span>
                     </label>
                     <label class="flex items-center p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
-                        <input type="checkbox" name="tourismType" value="自然・公園" class="mr-3" checked="">
+                        <input type="checkbox" name="tourismType" value="自然・公園" class="mr-3" checked>
                         <span><i class="fas fa-tree mr-2 text-green-600"></i>自然・公園</span>
                     </label>
                     <label class="flex items-center p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
@@ -241,7 +152,7 @@
                         <span><i class="fas fa-shopping-bag mr-2 text-pink-600"></i>ショッピング</span>
                     </label>
                     <label class="flex items-center p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
-                        <input type="checkbox" name="tourismType" value="グルメ・食べ歩き" class="mr-3" checked="">
+                        <input type="checkbox" name="tourismType" value="グルメ・食べ歩き" class="mr-3" checked>
                         <span><i class="fas fa-utensils mr-2 text-red-600"></i>グルメ・食べ歩き</span>
                     </label>
                     <label class="flex items-center p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
@@ -257,7 +168,9 @@
                     <label for="accommodation" class="block text-sm font-medium text-gray-700 mb-2">
                         <i class="fas fa-bed mr-2"></i>宿泊施設の希望
                     </label>
-                    <textarea id="accommodation" rows="3" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="例: バリアフリールーム、エレベーター完備、駅近など"></textarea>
+                    <textarea id="accommodation" rows="3" 
+                              class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                              placeholder="例: バリアフリールーム、エレベーター完備、駅近など"></textarea>
                 </div>
 
                 <!-- 食事の希望 -->
@@ -265,12 +178,15 @@
                     <label for="dining" class="block text-sm font-medium text-gray-700 mb-2">
                         <i class="fas fa-utensils mr-2"></i>食事の希望
                     </label>
-                    <textarea id="dining" rows="3" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="例: 段差なし、車椅子席あり、和食中心など"></textarea>
+                    <textarea id="dining" rows="3" 
+                              class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                              placeholder="例: 段差なし、車椅子席あり、和食中心など"></textarea>
                 </div>
             </div>
 
             <!-- 生成ボタン -->
-            <button id="generateBtn" class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-200 flex items-center justify-center text-lg font-semibold">
+            <button id="generateBtn" 
+                    class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-200 flex items-center justify-center text-lg font-semibold">
                 <i class="fas fa-magic mr-2"></i>
                 <span id="btnText">旅行プラン生成</span>
                 <div id="loadingSpinner" class="loading ml-3 hidden"></div>
@@ -294,113 +210,14 @@
                 </button>
             </div>
 
-            <div id="result" class="prose max-w-none"><div class="travel-plan"><h2 class="text-2xl font-bold text-blue-600 mt-6 mb-4"><i class="fas fa-map-marked-alt mr-2"></i>沖縄バリアフリー旅行プラン（4日間）</h2>
-<br>
-#<h2 class="text-2xl font-bold text-blue-600 mt-6 mb-4"><i class="fas fa-map-marked-alt mr-2"></i>1日目：【那覇空港到着＆国際通り散策】</h2>
-<br>
-<strong class="font-semibold text-gray-800">午前</strong>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>時間：10時00分〜12時00分</li>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>場所：那覇空港</li>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>内容：那覇空港到着。空港内のバリアフリー対応タクシーでホテルへ移動。</li>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i><div class="bg-blue-50 border-l-4 border-blue-400 p-3 my-2"><strong class="text-blue-800"><i class="fas fa-wheelchair mr-2"></i>バリアフリー情報：</strong><span class="text-blue-700">那覇空港はバリアフリー対応が充実。エレベーター、車椅子対応トイレ多数、スロープ完備。車椅子貸し出しサービスあり。案内係への声かけでサポートを受けられる。</span></div></li></div>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>アクセス：空港内は全てバリアフリー対応。タクシー乗り場には車椅子対応タクシーが待機しており、事前に予約も可能。</li>
-<br>
-<strong class="font-semibold text-gray-800">昼食</strong>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>レストラン：国際通り「まるごと沖縄食堂」</li>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i><div class="bg-blue-50 border-l-4 border-blue-400 p-3 my-2"><strong class="text-blue-800"><i class="fas fa-wheelchair mr-2"></i>バリアフリー情報：</strong><span class="text-blue-700">入口はスロープ。車椅子対応トイレあり。店内は広々としており、車椅子での移動も容易。スタッフに声かければサポートしてもらえる。</span></div></li>
-<br>
-<strong class="font-semibold text-gray-800">午後</strong>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>時間：13時00分〜16時00分</li>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>場所：国際通り</li>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>内容：国際通り散策。お土産屋や飲食店を巡る。</li>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i><div class="bg-blue-50 border-l-4 border-blue-400 p-3 my-2"><strong class="text-blue-800"><i class="fas fa-wheelchair mr-2"></i>バリアフリー情報：</strong><span class="text-blue-700">国際通り自体は歩道が狭く、段差がある場所もあるため、一部で注意が必要。しかし、主要な施設はバリアフリー対応が進んでいる。多くの店にスロープや車椅子対応トイレが設置されている。</span></div></li>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>アクセス：車椅子対応タクシー、もしくは電動車椅子での移動がおすすめ。歩道が狭い部分もあるので、介助者のサポートが必要な場合もある。</li>
-<br>
-<strong class="font-semibold text-gray-800">宿泊</strong>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>ホテル：ホテル日航アリビラ（もしくは同等レベルのバリアフリー対応ホテル）</li>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i><div class="bg-blue-50 border-l-4 border-blue-400 p-3 my-2"><strong class="text-blue-800"><i class="fas fa-wheelchair mr-2"></i>バリアフリー情報：</strong><span class="text-blue-700">全室バリアフリー対応ではないが、車椅子対応ルームあり（予約必須）。エレベーター、車椅子対応トイレ完備。館内は比較的平坦で、段差が少ない。駐車場からホテル入口まではスロープもしくはバリアフリー対応の通路あり。スタッフはバリアフリー対応に詳しい。</span></div></li>
-<br><br>
-#<h2 class="text-2xl font-bold text-blue-600 mt-6 mb-4"><i class="fas fa-map-marked-alt mr-2"></i>2日目：【首里城公園＆壺屋やちむん通り】</h2>
-<br>
-<strong class="font-semibold text-gray-800">午前</strong>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>時間：9時00分〜12時00分</li>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>場所：首里城公園</li>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>内容：首里城公園見学。</li>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i><div class="bg-blue-50 border-l-4 border-blue-400 p-3 my-2"><strong class="text-blue-800"><i class="fas fa-wheelchair mr-2"></i>バリアフリー情報：</strong><span class="text-blue-700">一部勾配のある箇所もあるが、主要な建物へのアクセスはスロープやエレベーターが整備されている。車椅子対応トイレあり。駐車場から主要エリアまでは比較的平坦な道でアクセスしやすい。スタッフによる案内サービスあり(要事前予約)。</span></div></li>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>アクセス：ホテルからタクシー利用。事前に首里城公園のバリアフリー情報を確認し、ルートを相談する。</li>
-<br>
-<strong class="font-semibold text-gray-800">昼食</strong>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>レストラン：首里城近くにある沖縄そば屋（バリアフリー対応を確認の上決定）</li>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i><div class="bg-blue-50 border-l-4 border-blue-400 p-3 my-2"><strong class="text-blue-800"><i class="fas fa-wheelchair mr-2"></i>バリアフリー情報：</strong><span class="text-blue-700">（事前に確認し、情報を記載）</span></div></li>
-<br>
-<strong class="font-semibold text-gray-800">午後</strong>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>時間：13時00分〜16時00分</li>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>場所：壺屋やちむん通り</li>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>内容：壺屋やちむん通り散策。焼き物などを鑑賞。</li>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i><div class="bg-blue-50 border-l-4 border-blue-400 p-3 my-2"><strong class="text-blue-800"><i class="fas fa-wheelchair mr-2"></i>バリアフリー情報：</strong><span class="text-blue-700">道幅が狭く、段差がある箇所もあるため、車椅子での移動は難しい部分がある。しかし、主要なお店はスロープを設置しているところが多い。車椅子対応トイレは少ない可能性があるため、事前に確認が必要。</span></div></li>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>アクセス：タクシー利用。事前に各店舗のバリアフリー情報を確認し、ルートを計画する。</li>
-<br>
-<strong class="font-semibold text-gray-800">宿泊</strong>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>ホテル：ホテル日航アリビラ</li>
-<br><br>
-#<h2 class="text-2xl font-bold text-blue-600 mt-6 mb-4"><i class="fas fa-map-marked-alt mr-2"></i>3日目：【恩納村・万座毛＆美ら海水族館】</h2>
-<br>
-<strong class="font-semibold text-gray-800">午前</strong>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>時間：9時00分〜12時00分</li>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>場所：万座毛</li>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>内容：万座毛の絶景を鑑賞。</li>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i><div class="bg-blue-50 border-l-4 border-blue-400 p-3 my-2"><strong class="text-blue-800"><i class="fas fa-wheelchair mr-2"></i>バリアフリー情報：</strong><span class="text-blue-700">駐車場から展望台までは舗装された遊歩道だが、やや勾配があり、車椅子での移動は介助が必要。車椅子対応トイレあり。</span></div></li>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>アクセス：タクシーもしくはレンタカー（車椅子対応車）。</li>
-<br>
-<strong class="font-semibold text-gray-800">昼食</strong>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>レストラン：恩納村のレストラン（バリアフリー対応を確認の上決定）</li>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i><div class="bg-blue-50 border-l-4 border-blue-400 p-3 my-2"><strong class="text-blue-800"><i class="fas fa-wheelchair mr-2"></i>バリアフリー情報：</strong><span class="text-blue-700">（事前に確認し、情報を記載）</span></div></li>
-<br><br>
-<strong class="font-semibold text-gray-800">午後</strong>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>時間：13時00分〜17時00分</li>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>場所：沖縄美ら海水族館</li>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>内容：美ら海水族館見学。</li>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i><div class="bg-blue-50 border-l-4 border-blue-400 p-3 my-2"><strong class="text-blue-800"><i class="fas fa-wheelchair mr-2"></i>バリアフリー情報：</strong><span class="text-blue-700">館内は広くバリアフリー対応が充実。エレベーター、車椅子対応トイレ多数、スロープ完備。館内は比較的平坦。駐車場から入口まではスロープ。スタッフによる案内サービスあり。</span></div></li>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>アクセス：タクシーもしくはレンタカー（車椅子対応車）。</li>
-<br>
-<strong class="font-semibold text-gray-800">宿泊</strong>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>ホテル：ホテル日航アリビラ</li>
-<br><br>
-#<h2 class="text-2xl font-bold text-blue-600 mt-6 mb-4"><i class="fas fa-map-marked-alt mr-2"></i>4日目：【出発】</h2>
-<br>
-<strong class="font-semibold text-gray-800">午前</strong>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>時間：9時00分〜11時00分</li>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>場所：ホテル</li>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>内容：朝食後、ホテルをチェックアウト。那覇空港へ移動。</li>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i><div class="bg-blue-50 border-l-4 border-blue-400 p-3 my-2"><strong class="text-blue-800"><i class="fas fa-wheelchair mr-2"></i>バリアフリー情報：</strong><span class="text-blue-700">（ホテルの情報を参照）</span></div></li>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>アクセス：ホテルからバリアフリー対応タクシーで那覇空港へ。</li>
-<br>
-<strong class="font-semibold text-gray-800">昼食</strong>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>空港内レストランで軽食をとる。</li>
-<br>
-<strong class="font-semibold text-gray-800">午後</strong>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>時間：13時00分〜</li>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>場所：那覇空港</li>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>内容：搭乗手続き後、東京へ出発。</li>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i><div class="bg-blue-50 border-l-4 border-blue-400 p-3 my-2"><strong class="text-blue-800"><i class="fas fa-wheelchair mr-2"></i>バリアフリー情報：</strong><span class="text-blue-700">（那覇空港の情報参照）</span></div></li>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>アクセス：空港内は全てバリアフリー対応。</li>
-<br><br>
-#<h2 class="text-2xl font-bold text-blue-600 mt-6 mb-4"><i class="fas fa-map-marked-alt mr-2"></i>旅行のポイント・注意事項</h2>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>各施設のバリアフリー情報は事前に公式ホームページで確認するか、電話で問い合わせることが重要です。</li>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>車椅子対応タクシーは事前に予約することを強くおすすめします。</li>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>沖縄の気温・湿度が高いので、こまめな水分補給と休憩が必要です。</li>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>日差しが強いので、帽子・日焼け止めクリームは必須です。</li>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>緊急時のために、携帯電話の充電を忘れずに行いましょう。</li>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>移動手段は、状況に応じてタクシーやレンタカー（車椅子対応車）を検討しましょう。</li>
-<br><br>
-#<h2 class="text-2xl font-bold text-blue-600 mt-6 mb-4"><i class="fas fa-map-marked-alt mr-2"></i>緊急連絡先</h2>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>那覇市立病院：電話番号（事前に確認）</li>
-<li class="ml-4 mb-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>その他、近くの医療機関の情報は宿泊ホテルにて確認できます。</li>
-<br><br>
-<strong class="font-semibold text-gray-800">注記:</strong> このプランはあくまで提案です。  具体的な施設やレストラン、移動手段などは、ご自身の状況に合わせて調整してください。  特に、バリアフリー情報は常に変更される可能性があるため、旅行前に最新の情報を確認することを強くお勧めします。  また、車椅子ユーザーの方の状況（介助の必要性など）によって、プランの内容を修正する必要があるかもしれません。  事前に専門機関への相談も検討することをお勧めします。
-<br></div>
+            <div id="result" class="prose max-w-none">
+                <p class="text-gray-500 text-center py-8">
+                    <i class="fas fa-info-circle mr-2"></i>
+                    上記のフォームに情報を入力して、「旅行プラン生成」ボタンをクリックしてください。
+                </p>
+            </div>
 
-            <div id="resultActions" class="mt-6 flex gap-3">
+            <div id="resultActions" class="mt-6 flex gap-3 hidden">
                 <button id="saveBtn" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">
                     <i class="fas fa-save mr-2"></i>プランを保存
                 </button>
@@ -768,8 +585,8 @@
             });
         });
     </script>
-
-
+</body>
+</html>
     <script id="html_badge_script1">
         window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
             "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDhhyjGefzQiioNfSLeYFSRztOqTbXp46TzIYM%2BWwLvJb8rEPwwpLnZZW9DXegJlH7qZ1hq%2BtKWInOUY6gdxNxo8QqhJIK5mJLkJt9jzukdyaCzHQE%2F%2FZZC3MX1TiXCJ2OOZK1dTjw9B3Y57u5TNRGlkUr730dWAssZCquVFAXwQiK%2BQ0%2Bx2WNnbnulL7FDGWwb33LCjvhFStGh6YMNBcKdPeZIzZjiIJ5VHL6drlXELVpHxEiu4Of3Hga4VQwRexqhGyl%2FJhT56AKcEpcDLero%2BR3J2NSBFuHrHRw8eqxT0m8uJUuYf61aBphdUzCJFJE5ltHiKxxMMtC0LE1Zl8N4Ck2kutaryIB9ZciBKXuAcFLIzGxpeoZIl5Phm%2FE23%2BPqBwoHChkwY1mlNRZNyjJPqQtE6Gb6RNUWnAFPuZr4QVhofARHVVmySGRcikoKzIzuxdesX4wp1sAsQDy6G5J66oNvsa6MCzT6VrGD8Y8MZ%2B33I%2F%2FHtrmLy%2B1qo%2FBTVTVhbCe2hFgzOttVc4duQSwwg%3D";
@@ -777,20 +594,5 @@
         window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDhhyjGefzQiioNfSLeYFSRztOqTbXp46TzIYM+WwLvJb8rEPwwpLnZZW9DXegJlH7qZ1hq+tKWInOUY6gdxNxo8QqhJIK5mJLkJt9jzukdyaCzHQE//ZZC3MX1TiXCJ2OOZK1dTjw9B3Y57u5TNRGlkUr730dWAssZCquVFAXwQiK+Q0+x2WNnbnulL7FDGWwb33LCjvhFStGh6YMNBcKdPeZIzZjiIJ5VHL6drlXELVpHxEiu4Of3Hga4VQwRexqhGyl/JhT56AKcEpcDLero+R3J2NSBFuHrHRw8eqxT0m8uJUuYf61aBphdUzCJFJE5ltHiKxxMMtC0LE1Zl8N4Ck2kutaryIB9ZciBKXuAcFLIzGxpeoZIl5Phm/E23+PqBwoHChkwY1mlNRZNyjJPqQtE6Gb6RNUWnAFPuZr4QVhofARHVVmySGRcikoKzIzuxdesX4wp1sAsQDy6G5J66oNvsa6MCzT6VrGD8Y8MZ+33I//HtrmLy+1qo/BTVTVhbCe2hFgzOttVc4duQSwwg=";
     </script>
     
-    <script id="html_notice_dialog_script" src="./index_files/notice_dialog.js"></script>
-    <div class="genspark-notice-dialog" style="display: none;">
-      <div class="genspark-notice-content">
-        <h2 class="genspark-notice-title">このサイトはユーザーによって作成されました、ご注意ください：</h2>
-        <ul class="genspark-notice-list">
-          <li>コンテンツには不正確な情報が含まれている可能性があります。使用前に情報を確認してください。</li>
-          <li>不適切なコンテンツを見つけた場合は、<a href="mailto:support@genspark.ai">support@genspark.ai</a> までご連絡ください。</li>
-        </ul>
-        <div class="genspark-notice-checkbox">
-          <input type="checkbox" id="genspark-dont-show">
-          <label for="genspark-dont-show">このメッセージを再表示しない。</label>
-        </div>
-        <div class="genspark-notice-actions">
-          <button class="genspark-notice-ok">OK</button>
-        </div>
-      </div>
-    </div></body></html>
+    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
+    
